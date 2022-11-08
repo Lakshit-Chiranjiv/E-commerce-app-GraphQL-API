@@ -1,0 +1,20 @@
+{
+  "name": "e-commerce-app-graphql-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lakshit-Chiranjiv/E-commerce-app-GraphQL-API.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lakshit-Chiranjiv/E-commerce-app-GraphQL-API/issues"
+  },
+  "homepage": "https://github.com/Lakshit-Chiranjiv/E-commerce-app-GraphQL-API#readme"
+}
