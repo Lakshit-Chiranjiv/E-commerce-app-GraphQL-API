@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/Lakshit-Chiranjiv/E-commerce-app-GraphQL-API/issues"
   },
-  "homepage": "https://github.com/Lakshit-Chiranjiv/E-commerce-app-GraphQL-API#readme"
+  "homepage": "https://github.com/Lakshit-Chiranjiv/E-commerce-app-GraphQL-API#readme",
+  "dependencies": {
+    "apollo-server": "^3.11.1",
+    "graphql": "^16.6.0"
+  }
 }
