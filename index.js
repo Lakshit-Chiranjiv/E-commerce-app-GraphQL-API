@@ -6,6 +6,14 @@ const typeDefs = gql`
     }
 `
 
+const resolvers = {
+    Query: {
+        name: () => {
+            return "Lakshit"
+        }
+    }
+}
+
 const server = new ApolloServer()
 
 server.listen().then(({url}) => console.log("Server running on",url))
