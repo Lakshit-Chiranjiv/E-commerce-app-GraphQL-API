@@ -5,7 +5,9 @@ const typeDefs = gql`
         name: String,
         age: Int,
         balance: Float,
-        isBest: Boolean
+        isBest: Boolean,
+        roll: Int!
+        # ! specifies it can't be null
     }
 `
 
@@ -20,7 +22,10 @@ const resolvers = {
         balance: () => {
             return 9999999.99999
         },
-        isBest: () => true
+        isBest: () => true,
+        roll: () => {
+            return 586
+        }
     }
 }
 
