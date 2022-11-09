@@ -3,7 +3,9 @@ import { ApolloServer, gql } from "apollo-server";
 const typeDefs = gql`
     type Query {
         name: String,
-        age: Int
+        age: Int,
+        balance: Float,
+        isBest: Boolean
     }
 `
 
@@ -14,7 +16,11 @@ const resolvers = {
         },
         age: () => {
             return 21
-        }
+        },
+        balance: () => {
+            return 9999999.99999
+        },
+        isBest: () => true
     }
 }
 
