@@ -14,7 +14,7 @@ const typeDefs = gql`
 const resolvers = {
     Query: {
         name: () => {
-            return "Lakshit"
+            return "Lakshit Chiranjiv Sagar"
         },
         age: () => {
             return 21
