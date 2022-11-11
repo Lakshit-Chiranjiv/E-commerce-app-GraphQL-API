@@ -1,5 +1,36 @@
 import { ApolloServer, gql } from "apollo-server";
 
+const productsData = [
+    {
+        name: 'Laptop',
+        description: 'Good laptop',
+        price: 4885.23,
+        quantity: 30,
+        onSale: true
+    },
+    {
+        name: 'Smartphone',
+        description: 'Good smartphone',
+        price: 387.23,
+        quantity: 50,
+        onSale: true
+    },
+    {
+        name: 'Umbrella',
+        description: 'Good umbrella',
+        price: 45.73,
+        quantity: 10,
+        onSale: true
+    },
+    {
+        name: 'Notebook',
+        description: 'Good notebook',
+        price: 12.55,
+        quantity: 110,
+        onSale: false
+    },
+]
+
 const typeDefs = gql`
     type Query {
         name: String,
@@ -36,7 +67,8 @@ const resolvers = {
         roll: () => {
             return 586
         },
-        scores: () => [90,99,98]
+        scores: () => [90,99,98],
+        products: () => productsData
     }
 }
 
