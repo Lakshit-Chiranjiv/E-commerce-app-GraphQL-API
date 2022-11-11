@@ -7,7 +7,8 @@ const typeDefs = gql`
         balance: Float,
         isBest: Boolean,
         roll: Int!,
-        scores: [Int!]!
+        scores: [Int!]!,
+        products: [Product!]!
         # ! specifies it can't be null
     }
 
