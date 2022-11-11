@@ -10,6 +10,14 @@ const typeDefs = gql`
         scores: [Int!]!
         # ! specifies it can't be null
     }
+
+    type Product {
+        name: String!,
+        description: String,
+        price: Float!,
+        quantity: Int!,
+        onSale: Boolean!
+    }
 `
 
 const resolvers = {
