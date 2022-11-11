@@ -43,7 +43,8 @@ const typeDefs = gql`
         isBest: Boolean,
         roll: Int!,
         scores: [Int!]!,
-        products: [Product!]!
+        products: [Product!]!,
+        product(id: ID!): Product
         # ! specifies it can't be null
     }
 
