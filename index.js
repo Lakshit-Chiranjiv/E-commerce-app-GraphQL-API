@@ -74,7 +74,13 @@ const resolvers = {
             return 586
         },
         scores: () => [90,99,98],
-        products: () => productsData
+        products: () => productsData,
+        product: (parent,args,context) => {
+            const pid = args.id
+
+            const prod = productsData.find(p => p.id===pid)
+            return prod
+        }
     }
 }
 
