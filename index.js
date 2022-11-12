@@ -59,7 +59,9 @@ const typeDefs = gql`
         roll: Int!,
         scores: [Int!]!,
         products: [Product!]!,
-        product(id: ID!): Product
+        product(id: ID!): Product,
+        categories: [Category!]!,
+        category(id: ID!): Category
         # ! specifies it can't be null
     }
 
