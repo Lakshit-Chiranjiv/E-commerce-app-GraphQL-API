@@ -75,7 +75,8 @@ const typeDefs = gql`
         description: String,
         price: Float!,
         quantity: Int!,
-        onSale: Boolean!
+        onSale: Boolean!,
+        category: Category
     }
 
     type Category {
