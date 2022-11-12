@@ -2,7 +2,7 @@ import { ApolloServer, gql } from "apollo-server";
 
 const productsData = [
     {
-        id: "id1",
+        id: "pid1",
         name: 'Laptop',
         description: 'Good laptop',
         price: 4885.23,
@@ -10,7 +10,7 @@ const productsData = [
         onSale: true
     },
     {
-        id: "id2",
+        id: "pid2",
         name: 'Smartphone',
         description: 'Good smartphone',
         price: 387.23,
@@ -18,7 +18,7 @@ const productsData = [
         onSale: true
     },
     {
-        id: "id3",
+        id: "pid3",
         name: 'Umbrella',
         description: 'Good umbrella',
         price: 45.73,
@@ -26,13 +26,28 @@ const productsData = [
         onSale: true
     },
     {
-        id: "id4",
+        id: "pid4",
         name: 'Notebook',
         description: 'Good notebook',
         price: 12.55,
         quantity: 110,
         onSale: false
+    }
+]
+
+const categoriesData = [
+    {
+        id: 'cid1',
+        name: 'Electronics'
     },
+    {
+        id: 'cid2',
+        name: 'Stationary'
+    },
+    {
+        id: 'cid3',
+        name: 'Accessories'
+    }
 ]
 
 const typeDefs = gql`
