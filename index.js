@@ -7,7 +7,8 @@ const productsData = [
         description: 'Good laptop',
         price: 4885.23,
         quantity: 30,
-        onSale: true
+        onSale: true,
+        categoryId: "cid1"
     },
     {
         id: "pid2",
@@ -15,7 +16,8 @@ const productsData = [
         description: 'Good smartphone',
         price: 387.23,
         quantity: 50,
-        onSale: true
+        onSale: true,
+        categoryId: "cid1"
     },
     {
         id: "pid3",
@@ -23,7 +25,8 @@ const productsData = [
         description: 'Good umbrella',
         price: 45.73,
         quantity: 10,
-        onSale: true
+        onSale: true,
+        categoryId: "cid3"
     },
     {
         id: "pid4",
@@ -31,7 +34,8 @@ const productsData = [
         description: 'Good notebook',
         price: 12.55,
         quantity: 110,
-        onSale: false
+        onSale: false,
+        categoryId: "cid2"
     }
 ]
 
