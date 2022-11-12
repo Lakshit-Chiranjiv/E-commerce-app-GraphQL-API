@@ -102,7 +102,8 @@ const resolvers = {
 
             const prod = productsData.find(p => p.id===pid)
             return prod
-        }
+        },
+        categories: () => categoriesData,
     }
 }
 
