@@ -113,6 +113,14 @@ const resolvers = {
 
             return categoriesData.find(c => c.id === id)
         }
+    },
+
+    Category: {
+        products: (parent,args,context) => {
+            const { id } = parent
+
+            return productsData.filter(p => p.categoryId===id)
+        }
     }
 }
 
