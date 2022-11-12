@@ -71,6 +71,11 @@ const typeDefs = gql`
         quantity: Int!,
         onSale: Boolean!
     }
+
+    type Category {
+        id: ID!,
+        name: String!
+    }
 `
 
 const resolvers = {
