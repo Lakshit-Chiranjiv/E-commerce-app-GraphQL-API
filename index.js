@@ -80,7 +80,8 @@ const typeDefs = gql`
 
     type Category {
         id: ID!,
-        name: String!
+        name: String!,
+        products: [Product!]
     }
 `
 
