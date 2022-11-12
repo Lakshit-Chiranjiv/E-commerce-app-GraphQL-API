@@ -98,12 +98,16 @@ const resolvers = {
         scores: () => [90,99,98],
         products: () => productsData,
         product: (parent,args,context) => {
-            const pid = args.id
+            const { id } = args
 
-            const prod = productsData.find(p => p.id===pid)
-            return prod
+            return productsData.find(p => p.id===id)
         },
         categories: () => categoriesData,
+        category: (parent,args,context) => {
+            const { id } = args
+
+            return categoriesData.find(c => c.id === id)
+        }
     }
 }
 
