@@ -1,3 +1,5 @@
+import { categoriesData, productsData } from "../dummyDB.js"
+
 export const Query = {
     name: () => {
         return "Lakshit Chiranjiv Sagar"
