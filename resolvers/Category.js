@@ -1,3 +1,5 @@
+import { productsData } from "../dummyDB.js"
+
 export const Category = {
     products: (parent,args,context) => {
         const { id } = parent
