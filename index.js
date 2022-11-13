@@ -1,4 +1,5 @@
-import { ApolloServer, gql } from "apollo-server";
+import { ApolloServer } from "apollo-server";
+import { typeDefs } from "./schema.js";
 
 const productsData = [
     {
@@ -53,38 +54,6 @@ const categoriesData = [
         name: 'Accessories'
     }
 ]
-
-const typeDefs = gql`
-    type Query {
-        name: String,
-        age: Int,
-        balance: Float,
-        isBest: Boolean,
-        roll: Int!,
-        scores: [Int!]!,
-        products: [Product!]!,
-        product(id: ID!): Product,
-        categories: [Category!]!,
-        category(id: ID!): Category
-        # ! specifies it can't be null
-    }
-
-    type Product {
-        id: ID!,
-        name: String!,
-        description: String,
-        price: Float!,
-        quantity: Int!,
-        onSale: Boolean!,
-        category: Category
-    }
-
-    type Category {
-        id: ID!,
-        name: String!,
-        products: [Product!]
-    }
-`
 
 const resolvers = {
     Query: {
