@@ -30,4 +30,12 @@ export const typeDefs = gql`
         name: String!,
         products: [Product!]
     }
+
+    type Review {
+        id: ID!,
+        title: String!,
+        comment: String,
+        rating: Int!,
+        date: String!
+    }
 `
