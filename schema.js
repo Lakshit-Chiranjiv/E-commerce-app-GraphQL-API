@@ -22,7 +22,8 @@ export const typeDefs = gql`
         price: Float!,
         quantity: Int!,
         onSale: Boolean!,
-        category: Category
+        category: Category,
+        reviews: [Review!]
     }
 
     type Category {
