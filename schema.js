@@ -41,6 +41,7 @@ export const typeDefs = gql`
     }
 
     input ProductFilterInput {
-        onSale: Boolean
+        onSale: Boolean,
+        avgRating: Int
     }
 `
