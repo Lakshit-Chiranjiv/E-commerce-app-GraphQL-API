@@ -20,7 +20,16 @@ export const Query = {
     
     scores: () => [90,99,98],
 
-    products: (parent,args,{productsData}) => productsData,
+    products: (parent,{filter},{productsData}) => {
+        let filteredProducts = productsData
+        if(filter){
+            if(filter.onSale)
+                filteredProducts = productsData.filter(p => p.onSale)
+            else
+                filteredProducts = productsData.filter(p => !p.onSale)  
+        }
+        return filteredProducts
+    },
     
     product: (parent,{id},{productsData}) => {
         return productsData.find(p => p.id===id)
