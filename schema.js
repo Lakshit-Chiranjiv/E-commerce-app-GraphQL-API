@@ -8,7 +8,7 @@ export const typeDefs = gql`
         isBest: Boolean,
         roll: Int!,
         scores: [Int!]!,
-        products: [Product!]!,
+        products(filter: ProductFilterInput): [Product!]!,
         product(id: ID!): Product,
         categories: [Category!]!,
         category(id: ID!): Category
@@ -38,5 +38,9 @@ export const typeDefs = gql`
         comment: String,
         rating: Int!,
         date: String!
+    }
+
+    input ProductFilterInput {
+        onSale: Boolean
     }
 `
