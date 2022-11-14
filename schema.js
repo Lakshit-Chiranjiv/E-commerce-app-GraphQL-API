@@ -29,7 +29,7 @@ export const typeDefs = gql`
     type Category {
         id: ID!,
         name: String!,
-        products: [Product!]
+        products(filter: ProductFilterInput): [Product!]
     }
 
     type Review {
