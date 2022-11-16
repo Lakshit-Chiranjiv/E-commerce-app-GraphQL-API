@@ -26,7 +26,7 @@ export const Query = {
             const { onSale, avgRating } = filter
             if(onSale)
                 filteredProducts = productsData.filter(p => p.onSale)
-            else if(onSale == false)
+            else if(onSale === false)
                 filteredProducts = productsData.filter(p => !p.onSale)  
 
             if([1,2,3,4,5].includes(avgRating)){
