@@ -32,5 +32,25 @@ export const Mutation = {
         productsData.push(newProduct)
 
         return newProduct
+    },
+
+    addReview: (parent, { input }, { reviewsData, productsData }) => {
+        const { title, comment, date, rating ,productId } = input
+
+        if(0 > Number(productId.slice(-1)) || Number(productId.slice(-1)) > productsData.length)
+            return null
+
+        const newReview = {
+            id: "rid"+(reviewsData.length+1),
+            title,
+            comment,
+            rating,
+            date,
+            productId
+        }
+
+        reviewsData.push(newReview)
+
+        return newReview
     }
 }
