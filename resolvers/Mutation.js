@@ -4,7 +4,7 @@ export const Mutation = {
         const { name } = input
 
         const newCategory = {
-            id: "cid"+categoriesData.length,
+            id: "cid"+categoriesData.length+1,
             name
         }
 
