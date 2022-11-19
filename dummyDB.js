@@ -1,4 +1,4 @@
-export const productsData = [
+const productsData = [
     {
         id: "pid1",
         name: 'Laptop',
@@ -37,7 +37,7 @@ export const productsData = [
     }
 ]
 
-export const categoriesData = [
+const categoriesData = [
     {
         id: 'cid1',
         name: 'Electronics'
@@ -52,7 +52,7 @@ export const categoriesData = [
     }
 ]
 
-export const reviewsData = [
+const reviewsData = [
     {
         id: "rid1",
         title: "Great product",
@@ -110,3 +110,10 @@ export const reviewsData = [
         productId: "pid3"
     },
 ]
+
+
+export const db = {
+    productsData,
+    categoriesData,
+    reviewsData
+}
