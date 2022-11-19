@@ -141,5 +141,29 @@ export const Mutation = {
         })
 
         return updatedProduct
+    },
+
+    updateReview: (parent,{ id, input }, { db }) => {
+        if(0 > Number(id.slice(3)) || Number(id.slice(3)) > db.reviewsData.length)
+            return null
+
+        let updatedReview
+        const idx = db.reviewsData.findIndex(r => r.id === id)
+        db.reviewsData = db.reviewsData.map((r,i) => {
+            if(idx === i){
+                updatedReview = {
+                    ...r,
+                    ...input
+                }
+                return {
+                    ...r,
+                    ...input 
+                }
+            }
+            else 
+                return r
+        })
+
+        return updatedReview
     }
 }
