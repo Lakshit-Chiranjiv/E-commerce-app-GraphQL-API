@@ -1,5 +1,5 @@
 import { ApolloServer } from "apollo-server";
-import { categoriesData, productsData, reviewsData } from "./dummyDB.js";
+import { db } from "./dummyDB.js";
 import { Category } from "./resolvers/Category.js";
 import { Mutation } from "./resolvers/Mutation.js";
 import { Product } from "./resolvers/Products.js";
@@ -14,9 +14,7 @@ const resolvers = {
 }
 
 const context = {
-    categoriesData,
-    productsData,
-    reviewsData    
+    db
 }
 
 const server = new ApolloServer({typeDefs, resolvers, context})
