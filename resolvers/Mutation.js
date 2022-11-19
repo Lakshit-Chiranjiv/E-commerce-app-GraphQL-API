@@ -92,5 +92,30 @@ export const Mutation = {
         db.reviewsData = db.reviewsData.filter(r => r.id !== id)
 
         return "Successfully deleted "+id
+    },
+
+    updateCategory: (parent,{ id, input }, { db }) => {
+        if(0 > Number(id.slice(3)) || Number(id.slice(3)) > db.categoriesData.length)
+            return null
+
+        const { name } = input
+        let updatedCategory
+        const idx = db.categoriesData.findIndex(c => c.id === id)
+        db.categoriesData = db.categoriesData.map((c,i) => {
+            if(idx === i){
+                updatedCategory = {
+                    ...c,
+                    name
+                }
+                return {
+                    ...c,
+                    name 
+                }
+            }
+            else 
+                return c
+        })
+
+        return updatedCategory
     }
 }
