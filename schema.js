@@ -92,10 +92,10 @@ export const typeDefs = gql`
     }
 
     input UpdateReviewInput {
-        title: String!,
+        title: String,
         comment: String,
-        rating: Int!,
-        date: String!,
-        productId: String!
+        rating: Int,
+        date: String,
+        productId: String
     }
 `
