@@ -22,7 +22,7 @@ export const typeDefs = gql`
         deleteCategory(id: ID!): String!,
         deleteProduct(id: ID!): String!,
         deleteReview(id: ID!): String!,
-        updateCategory(id: ID!,input: UpdateCategoryInput): Category!
+        updateCategory(id: ID!,input: UpdateCategoryInput): Category
     }
 
     type Product {
