@@ -19,7 +19,8 @@ export const typeDefs = gql`
         addCategory(input: AddCategoryInput): Category!,
         addProduct(input: AddProductInput): Product,
         addReview(input: AddReviewInput): Review,
-        deleteCategory(id: ID!): String!
+        deleteCategory(id: ID!): String!,
+        deleteProduct(id: ID!): String!
     }
 
     type Product {
