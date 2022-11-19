@@ -60,9 +60,14 @@ export const Mutation = {
             return "Incorrect Category Id"
 
         db.categoriesData = db.categoriesData.filter(c => c.id !== id)
-        db.productsData.map(p => {
+        db.productsData = db.productsData.map(p => {
             if(p.categoryId === id)
-                p.categoryId = null
+                return {
+                    ...p,
+                    categoryId: null
+                }
+            else
+                return p
         })
 
         return "Successfully deleted "+id
