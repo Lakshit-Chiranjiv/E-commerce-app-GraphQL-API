@@ -71,5 +71,16 @@ export const Mutation = {
         })
 
         return "Successfully deleted "+id
+    },
+
+    deleteProduct: (parent, { id }, { db }) => {
+
+        if(0 > Number(id.slice(-1)) || Number(id.slice(-1)) > db.productsData.length)
+            return "Incorrect Product Id"
+
+        db.productsData = db.productsData.filter(p => p.id !== id)
+        db.reviewsData = db.reviewsData.filter(r => r.productId !== id)
+
+        return "Successfully deleted "+id
     }
 }
