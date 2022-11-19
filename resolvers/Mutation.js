@@ -52,5 +52,19 @@ export const Mutation = {
         reviewsData.push(newReview)
 
         return newReview
+    },
+
+    deleteCategory: (parent, { id }, { categoriesData, productsData }) => {
+
+        if(0 > Number(id.slice(-1)) || Number(id.slice(-1)) > categoriesData.length)
+            return "Incorrect Category Id"
+
+        categoriesData = categoriesData.filter(c => c.id !== id)
+        productsData.map(p => {
+            if(p.categoryId === id)
+                p.categoryId = null
+        })
+
+        return "Successfully deleted "+id
     }
 }
