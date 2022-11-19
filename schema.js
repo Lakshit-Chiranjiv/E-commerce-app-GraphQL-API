@@ -23,7 +23,8 @@ export const typeDefs = gql`
         deleteProduct(id: ID!): String!,
         deleteReview(id: ID!): String!,
         updateCategory(id: ID!,input: UpdateCategoryInput!): Category,
-        updateProduct(id: ID!, input: UpdateProductInput!): Product
+        updateProduct(id: ID!, input: UpdateProductInput!): Product,
+        updateReview(id: ID!, input: UpdateReviewInput): Review
     }
 
     type Product {
@@ -83,6 +84,14 @@ export const typeDefs = gql`
     }
 
     input AddReviewInput {
+        title: String!,
+        comment: String,
+        rating: Int!,
+        date: String!,
+        productId: String!
+    }
+
+    input UpdateReviewInput {
         title: String!,
         comment: String,
         rating: Int!,
