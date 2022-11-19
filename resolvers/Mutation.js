@@ -82,5 +82,15 @@ export const Mutation = {
         db.reviewsData = db.reviewsData.filter(r => r.productId !== id)
 
         return "Successfully deleted "+id
+    },
+
+    deleteReview: (parent, { id }, { db }) => {
+
+        if(0 > Number(id.slice(-1)) || Number(id.slice(-1)) > db.reviewsData.length)
+            return "Incorrect Review Id"
+
+        db.reviewsData = db.reviewsData.filter(r => r.id !== id)
+
+        return "Successfully deleted "+id
     }
 }
