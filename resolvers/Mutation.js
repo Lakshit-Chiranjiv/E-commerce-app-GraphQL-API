@@ -117,5 +117,29 @@ export const Mutation = {
         })
 
         return updatedCategory
+    },
+
+    updateProduct: (parent,{ id, input }, { db }) => {
+        if(0 > Number(id.slice(3)) || Number(id.slice(3)) > db.productsData.length)
+            return null
+
+        let updatedProduct
+        const idx = db.productsData.findIndex(p => p.id === id)
+        db.productsData = db.productsData.map((p,i) => {
+            if(idx === i){
+                updatedProduct = {
+                    ...p,
+                    ...input
+                }
+                return {
+                    ...p,
+                    ...input 
+                }
+            }
+            else 
+                return p
+        })
+
+        return updatedProduct
     }
 }
