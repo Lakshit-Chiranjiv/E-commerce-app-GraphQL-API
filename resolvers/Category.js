@@ -1,11 +1,11 @@
 
 export const Category = {
     products: (parent,args,context) => {
-        const { productsData,reviewsData } = context
+        const { db } = context
         const { id } = parent
         const { filter } = args
 
-        const categoryProducts = productsData.filter(p => p.categoryId===id)
+        const categoryProducts = db.productsData.filter(p => p.categoryId===id)
         let filteredCategoryProducts = categoryProducts
         if(filter){
             if(filter.onSale)
@@ -17,7 +17,7 @@ export const Category = {
                 filteredCategoryProducts = filteredCategoryProducts.filter(p => {
                     let sumRating = 0, reviewCount = 0
                 
-                    reviewsData.forEach(r => {
+                    db.reviewsData.forEach(r => {
                         if(r.productId === p.id){
                             sumRating += r.rating
                             reviewCount++
